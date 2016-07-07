@@ -6,7 +6,6 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class RaceService {
-
   constructor(private http: Http) { }
 
   getRaces() {

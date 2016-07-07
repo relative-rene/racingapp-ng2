@@ -8,7 +8,7 @@ import { RaceService } from './race.service';
   styleUrls:['app/races.component.css']
 })
 export class RacesComponent {
-  heading = "Ultra Racing Schedule"
+  heading = "Marathon Schedule"
   cash = 10000;
   races: Race[];
 
