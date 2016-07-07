@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Race } from './race';
-import { RACES } from './mocks';
 import { RaceService } from './race.service';
 
 @Component({
@@ -16,8 +15,7 @@ export class RacesComponent {
   constructor(private raceService: RaceService) { }
 
   ngOnInit() {
-    this.raceService.getRaces()
-        .subscribe(data => this.races = data);
+    this.raceService.getRaces().subscribe(data => this.races = data);
   }
 
   totalCost() {
@@ -39,14 +37,14 @@ export class RacesComponent {
   }
 
   enterRace(race) {
-    if (this.cashLeft() > race.entryFee) {
-      race.isRacing = true;
+    if (this.cashLeft() > run.entryFee) {
+      run.isRacing = true;
     } else {
       alert("You don't have enough cash");
     }
   }
 
   cancelRace(race) {
-    race.isRacing = false;
+    run.isRacing = false;
   }
 }

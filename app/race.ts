@@ -1,8 +1,10 @@
 export class Race {
   id: number;
   name: string;
-  date: Date;
+  [key: date]: string;
   about: string;
   entryFee: number;
   isRacing: boolean;
+  image: string;
+  imageDesction: string;
 }
