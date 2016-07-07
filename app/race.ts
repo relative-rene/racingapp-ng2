@@ -1,10 +1,10 @@
 export class Race {
   id: number;
   name: string;
-  [key: date]: string;
+  date: date;
   about: string;
   entryFee: number;
   isRacing: boolean;
   image: string;
-  imageDesction: string;
+  imageDescription: string;
 }

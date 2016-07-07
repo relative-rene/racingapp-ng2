@@ -15,7 +15,8 @@ export class RacesComponent {
   constructor(private raceService: RaceService) { }
 
   ngOnInit() {
-    this.raceService.getRaces().subscribe(data => this.races = data);
+    this.raceService.getRaces()
+        .subscribe(data => this.races = data);
   }
 
   totalCost() {
@@ -37,14 +38,14 @@ export class RacesComponent {
   }
 
   enterRace(race) {
-    if (this.cashLeft() > run.entryFee) {
-      run.isRacing = true;
+    if (this.cashLeft() > race.entryFee) {
+      race.isRacing = true;
     } else {
-      alert("You don't have enough cash");
+      alert("No overtraining, you don't have enough cash");
     }
   }
 
   cancelRace(race) {
-    run.isRacing = false;
+    race.isRacing = false;
   }
 }
