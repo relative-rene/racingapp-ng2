@@ -33,7 +33,7 @@ export const RACES: Race[] = [{
     "date": new Date('2017-06-12T21:00:00'),
     "about": "The culminating event in distance running.",
     "entryFee": 180,
-    "isRacing": false
+    "isRacing": false,
     "image": "/images/bostonMarathon.jpg",
     "imageDescription": "Boston Marathon route"
   }];

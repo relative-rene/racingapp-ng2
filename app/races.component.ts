@@ -10,7 +10,7 @@ import { RaceService } from './race.service';
 })
 export class RacesComponent {
   heading = "Marathon Schedule"
-  cash = 10000;
+  cash = 600;
   races: Race[];
 
   constructor(private raceService: RaceService) { }
