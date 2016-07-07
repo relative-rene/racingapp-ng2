@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RacesComponent } from './races.component';
 import { RaceService } from './race.service';
-import { HTTP_PROVIDERS } from '@angular/http';
+import { HTTP_PROVIDERS } from '@angular/http'
 
 @Component({
   selector: 'racing-app',
