@@ -1,65 +1,42 @@
-# Angular 2 QuickStart Source
+# Angular 2 SPA displaying upcoming Marathons
 
-This repository holds the TypeScript source code of the [angular.io quickstart](https://angular.io/docs/ts/latest/quickstart.html),
-the foundation for most of the documentation samples and potentially a good starting point for your application.
+This repository holds the TypeScript source code of the [angular.io quickstart](https://angular.io/docs/ts/latest/quickstart.html).  After following
+the 5 min quickstart, I built an app displaying upcoming marathons.  This was just
+to get a better feel for Angular2 new design and features. I found the collected
+the content myself, so I do not feel it is maintainable at scale.
 
-It's been extended with testing support so you can start writing tests immediately.
 
-**This is not the perfect arrangement for your application. It is not designed for production.
-It exists primarily to get you started quickly with learning and prototyping in Angular 2**
+<img width="1002" alt="screen shot 2016-08-17 at 12 37 10 am" src="https://cloud.githubusercontent.com/assets/12709735/17728915/713adb20-6416-11e6-9c43-4cfe60464159.png">
 
-We are unlikely to accept suggestions about how to grow this QuickStart into something it is not.
-Please keep that in mind before posting issues and PRs.
+<img width="1020" alt="screen shot 2016-08-17 at 12 37 28 am" src="https://cloud.githubusercontent.com/assets/12709735/17728905/6055b4b0-6416-11e6-8c61-f3dc60b9140e.png">
 
-## Prerequisites
+# Difficulties
+- The quick start package is quite big. I spent a large portion of development reading docs.
+on the unfamiliar technologies.
 
-Node.js and npm are essential to Angular 2 development. 
-    
+# Future Development
+- If i planned to maintain this app, I would need to find a great api or website to scrap for content.  
+- The next step is expanding on the app features.
+- The quickstart is set up for Karma/Jasmine testing, so I would like to dabble with those programs.
+
+
+## Install app
+
+Clone this repo into new project folder (e.g., `my-proj`).
+```bash
+git clone https://github.com/relative-rene/racingapp-ng2.git my-proj
+cd my-proj
+
+```
+Node.js and npm are essential to Angular 2 development.
+
 <a href="https://docs.npmjs.com/getting-started/installing-node" target="_blank" title="Installing Node.js and updating npm">
 Get it now</a> if it's not already installed on your machine.
- 
+
 **Verify that you are running at least node `v5.x.x` and npm `3.x.x`**
 by running `node -v` and `npm -v` in a terminal/console window.
 Older versions produce errors.
 
-We recommend [nvm](https://github.com/creationix/nvm) for managing multiple versions of node and npm.
-
-## Create a new project based on the QuickStart
-
-Clone this repo into new project folder (e.g., `my-proj`).
-```bash
-git clone  https://github.com/angular/quickstart  my-proj
-cd my-proj
-```
-
-We have no intention of updating the source on `angular/quickstart`.
-Discard everything "git-like" by deleting the `.git` folder.
-```bash
-rm -rf .git  // non-Windows
-rd .git /S/Q // windows
-```
-
-### Create a new git repo
-You could [start writing code](#start-development) now and throw it all away when you're done.
-If you'd rather preserve your work under source control, consider taking the following steps.
-
-Initialize this project as a *local git repo* and make the first commit:
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-```
-
-Create a *remote repository* for this project on the service of your choice.
-
-Grab its address (e.g. *`https://github.com/<my-org>/my-proj.git`*) and push the *local repo* to the *remote*.
-```bash
-git remote add origin <repo-address>
-git push -u origin master
-```
-## Install npm packages
-
-> See npm and nvm version notes above
 
 Install the npm packages described in the `package.json` and verify that it works:
 
@@ -74,17 +51,11 @@ npm start
 
 > `npm run typings -- install`
 
-The `npm start` command first compiles the application, 
+The `npm start` command first compiles the application,
 then simultaneously re-compiles and runs the `lite-server`.
 Both the compiler and the server watch for file changes.
 
-Shut it down manually with Ctrl-C.
-
-You're ready to write your application.
-
-### npm scripts
-
-We've captured many of the most useful commands in npm scripts defined in the `package.json`:
+### npm scripts defined in the `package.json`:
 
 * `npm start` - runs the compiler and a server at the same time, both in "watch mode".
 * `npm run tsc` - runs the TypeScript compiler once.
@@ -101,50 +72,16 @@ Here are the test related scripts:
 
 ## Testing
 
-The QuickStart documentation doesn't discuss testing.
 This repo adds both karma/jasmine unit test and protractor end-to-end testing support.
 
-These tools are configured for specific conventions described below.
-
-*It is unwise and rarely possible to run the application, the unit tests, and the e2e tests at the same time.
-We recommend that you shut down one before starting another.*
-
 ### Unit Tests
-TypeScript unit-tests are usually in the `app` folder. Their filenames must end in `.spec`.
-
-Look for the example `app/app.component.spec.ts`.
-Add more `.spec.ts` files as you wish; we configured karma to find them.
-
 Run it with `npm test`
-
-That command first compiles the application, then simultaneously re-compiles and runs the karma test-runner.
-Both the compiler and the karma watch for (different) file changes.
-
-Shut it down manually with Ctrl-C.
 
 Test-runner output appears in the terminal window.
 We can update our app and our tests in real-time, keeping a weather eye on the console for broken tests.
-Karma is occasionally confused and it is often necessary to shut down its browser or even shut the command down (Ctrl-C) and
-restart it. No worries; it's pretty quick.
+Karma is occasionally confused and it is often necessary to shut down its browser or even shut the command down (Ctrl-C) and quick restart it.
 
 The `HTML-Reporter` is also wired in. That produces a prettier output; look for it in `~_test-output/tests.html`.
 
 ### End-to-end (E2E) Tests
-
-E2E tests are in the `e2e` directory, side by side with the `app` folder.
-Their filenames must end in `.e2e-spec.ts`.
-
-Look for the example `e2e/app.e2e-spec.ts`.
-Add more `.e2e-spec.js` files as you wish (although one usually suffices for small projects);
-we configured protractor to find them.
-
-Thereafter, run them with `npm run e2e`.
-
-That command first compiles, then simultaneously starts the Http-Server at `localhost:8080`
-and launches protractor.  
-
-The pass/fail test results appear at the bottom of the terminal window.
-A custom reporter (see `protractor.config.js`) generates a  `./_test-output/protractor-results.txt` file
-which is easier to read; this file is excluded from source control.
-
-Shut it down manually with Ctrl-C.
+run them with `npm run e2e`.
