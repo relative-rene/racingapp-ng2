@@ -1,15 +1,15 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/Cellar/node/5.8.0/bin/node',
+1 verbose cli [ '/usr/local/Cellar/node/6.2.1/bin/node',
 1 verbose cli   '/usr/local/bin/npm',
 1 verbose cli   'start' ]
-2 info using npm@3.9.5
-3 info using node@v6.2.2
+2 info using npm@3.9.3
+3 info using node@v6.2.1
 4 verbose run-script [ 'prestart', 'start', 'poststart' ]
 5 info lifecycle angular2-quickstart@1.0.0~prestart: angular2-quickstart@1.0.0
 6 silly lifecycle angular2-quickstart@1.0.0~prestart: no script for prestart, continuing
 7 info lifecycle angular2-quickstart@1.0.0~start: angular2-quickstart@1.0.0
 8 verbose lifecycle angular2-quickstart@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle angular2-quickstart@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/rarellano/portfolio/portfolio/racingapp-ng2/node_modules/.bin:/usr/local/Cellar/node/5.8.0/bin:/Users/rarellano/.rvm/gems/ruby-2.2.1/bin:/Users/rarellano/.rvm/gems/ruby-2.2.1@global/bin:/Users/rarellano/.rvm/rubies/ruby-2.2.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/rarellano/.rvm/bin
+9 verbose lifecycle angular2-quickstart@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/rarellano/portfolio/portfolio/racingapp-ng2/node_modules/.bin:/usr/local/Cellar/node/6.2.1/bin:/Users/rarellano/.rvm/gems/ruby-2.2.1/bin:/Users/rarellano/.rvm/gems/ruby-2.2.1@global/bin:/Users/rarellano/.rvm/rubies/ruby-2.2.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/rarellano/.rvm/bin
 10 verbose lifecycle angular2-quickstart@1.0.0~start: CWD: /Users/rarellano/portfolio/portfolio/racingapp-ng2
 11 silly lifecycle angular2-quickstart@1.0.0~start: Args: [ '-c', 'tsc && concurrently "tsc -w" "lite-server" ' ]
 12 silly lifecycle angular2-quickstart@1.0.0~start: Returned: code: 2  signal: null
@@ -27,9 +27,9 @@
 15 verbose pkgid angular2-quickstart@1.0.0
 16 verbose cwd /Users/rarellano/portfolio/portfolio/racingapp-ng2
 17 error Darwin 15.0.0
-18 error argv "/usr/local/Cellar/node/5.8.0/bin/node" "/usr/local/bin/npm" "start"
-19 error node v6.2.2
-20 error npm  v3.9.5
+18 error argv "/usr/local/Cellar/node/6.2.1/bin/node" "/usr/local/bin/npm" "start"
+19 error node v6.2.1
+20 error npm  v3.9.3
 21 error code ELIFECYCLE
 22 error angular2-quickstart@1.0.0 start: `tsc && concurrently "tsc -w" "lite-server" `
 22 error Exit status 2

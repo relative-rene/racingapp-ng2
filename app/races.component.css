@@ -20,7 +20,10 @@ li.racing {
 li:last-child {
   margin-bottom: 0;
 }
-
+img {
+  height: 30em;
+  width: 40em;
+}
 .button {
   background: #fd79fc;
   border-radius: 3px;
@@ -116,7 +119,6 @@ li:last-child {
 }
 
 .cash {
-  background: #000;
   border: none;
   display: inline-block;
   height: 30px;
